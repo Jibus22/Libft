@@ -6,68 +6,43 @@
 /*   By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 18:04:52 by jle-corr          #+#    #+#             */
-/*   Updated: 2019/12/19 06:19:27 by jle-corr         ###   ########.fr       */
+/*   Updated: 2020/04/23 14:30:02 by jle-corr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		tabcreator(char const *s, char c)
+int			split_counter(char const *s, char c)
 {
-	int		i;
-	int		tabnb;
-
-	i = -1;
-	tabnb = 0;
-	while (s[++i])
-		if (s[i] != c && tabnb++)
-			while (s[i + 1] && s[i + 1] != c)
-				i++;
-	return (tabnb + 1);
-}
-
-static int		slenc(char const *s, char c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] && s[i] != c)
-		i++;
-	return (i);
-}
-
-static void		*freestr(char **strs, int tab)
-{
+	char	*spliter;
 	int		i;
 
 	i = 0;
-	while (strs[i] != NULL && i < tab)
-		free(strs[i++]);
-	free(strs);
-	return (NULL);
-}
-
-char			**ft_split(char const *s, char c)
-{
-	char	**strs;
-	int		tab;
-	int		start;
-
-	if (!s)
-		return (NULL);
-	if (!(strs = (char**)malloc(sizeof(char*) * tabcreator(s, c))))
-		return (NULL);
-	start = -1;
-	tab = 0;
-	while (s[++start])
+	while (s && *s)
 	{
-		if (s[start] && s[start] != c)
-		{
-			if (!(strs[tab++] = ft_substr(s, start, slenc((s + start), c))))
-				return (freestr(strs, tab));
-			start += slenc((s + start), c) - 1;
-		}
+		if (((spliter = ft_strchr(s, c)) - s) != 0)
+			i++;
+		s = (spliter ? spliter + 1 : NULL);
 	}
-	strs[tab] = NULL;
-	return (strs);
+	return (i + 1);
+}
+
+char		**ft_split(char const *s, char c)
+{
+	char	**tab;
+	char	*adr;
+	int		i;
+
+	if (!(tab = (char**)malloc(sizeof(*tab) * split_counter(s, c))))
+		return (NULL);
+	i = 0;
+	while (s && *s)
+	{
+		if (((adr = ft_strchr(s, c)) - s) != 0)
+			if (!(tab[i++] = ft_substr(s, 0, (adr ? adr - s : ft_strlen(s)))))
+				return (ft_freetab(tab));
+		s = (adr ? adr + 1 : NULL);
+	}
+	tab[i] = NULL;
+	return (tab);
 }

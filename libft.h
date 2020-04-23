@@ -6,7 +6,7 @@
 /*   By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 16:18:20 by jle-corr          #+#    #+#             */
-/*   Updated: 2020/04/08 15:15:37 by jle-corr         ###   ########.fr       */
+/*   Updated: 2020/04/23 14:28:22 by jle-corr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int			ft_tolower(int c);
 
 void		ft_strdel(char **s);
 char		*ft_strnew(int size);
+void		*ft_freetab(char **tab);
 size_t		ft_strlen(const char *s);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
