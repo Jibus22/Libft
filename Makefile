@@ -6,7 +6,7 @@
 #    By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/11 04:58:03 by jle-corr          #+#    #+#              #
-#    Updated: 2020/04/23 14:29:20 by jle-corr         ###   ########.fr        #
+#    Updated: 2020/07/27 15:57:32 by jle-corr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,20 +29,25 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 OBJ = $(SRC:%.c=$(OBJDIR)/%.o)
 NAME = libft.a
 
-all : $(NAME)
+all : mk_objdir $(NAME)
+
+mk_objdir :
+	@if [ ! -d $(OBJDIR) ]; then mkdir $(OBJDIR); fi
 
 $(OBJDIR)/%.o : %.c $(DEPS)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME) : $(OBJ)
-	@echo "\n\033[1;36mlibft objects are just built.\033[0m"
+$(NAME) : message $(OBJ)
 	@ar rcs $@ $(OBJ)
 	@echo "\033[1;36m$@ is built !\033[0m"
+
+message :
+	@echo "\n\033[1;36mBuilding $(NAME) objects\033[0m"
 
 .PHONY : clean
 clean :
 	@rm -rf $(OBJ)
-	@echo "\n\033[1;33mlibft objects removed.\033[0m"
+	@echo "\033[1;33m$(NAME) objects removed.\033[0m"
 
 fclean : clean
 	@rm -f $(NAME)
