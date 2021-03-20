@@ -6,13 +6,13 @@
 /*   By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:30 by jle-corr          #+#    #+#             */
-/*   Updated: 2020/12/20 20:34:39 by jle-corr         ###   ########.fr       */
+/*   Updated: 2021/03/20 01:11:30 by jle-corr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strncpy(char *dst, const char *src, size_t len)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	char	*dst_cpy;
 	size_t	i;

@@ -6,13 +6,13 @@
 /*   By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 16:12:16 by jle-corr          #+#    #+#             */
-/*   Updated: 2019/12/03 16:57:21 by jle-corr         ###   ########.fr       */
+/*   Updated: 2021/03/20 01:33:14 by jle-corr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c > 64 && c < 91)
 		return (c + 32);

@@ -6,15 +6,15 @@
 /*   By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 15:11:44 by jle-corr          #+#    #+#             */
-/*   Updated: 2020/04/08 15:11:47 by jle-corr         ###   ########.fr       */
+/*   Updated: 2021/03/20 01:27:23 by jle-corr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long				ft_pow(int base, int power)
+long	ft_pow(int base, int power)
 {
-	long			result;
+	long	result;
 
 	result = 1;
 	while (power--)

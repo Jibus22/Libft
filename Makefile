@@ -6,7 +6,7 @@
 #    By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/11 04:58:03 by jle-corr          #+#    #+#              #
-#    Updated: 2020/07/27 15:57:32 by jle-corr         ###   ########.fr        #
+#    Updated: 2021/02/12 19:00:04 by jle-corr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,11 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		ft_tolower.c ft_toupper.c ft_pow.c ft_putstr.c ft_strdel.c ft_strnew.c \
 		ft_utoa.c ft_ltoa.c ft_ultoa.c ft_utox.c ft_utobx.c ft_ultox.c \
 		ft_strncpy.c get_next_line.c join_newstr.c ft_freetab.c\
-		
+		ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+		ft_lstadd_back.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c \
+		ft_lstmap.c \
+
+
 OBJ = $(SRC:%.c=$(OBJDIR)/%.o)
 NAME = libft.a
 

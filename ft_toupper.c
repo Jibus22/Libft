@@ -6,13 +6,13 @@
 /*   By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 16:11:58 by jle-corr          #+#    #+#             */
-/*   Updated: 2019/12/03 16:58:28 by jle-corr         ###   ########.fr       */
+/*   Updated: 2021/03/20 01:33:27 by jle-corr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c > 96 && c < 123)
 		return (c - 32);

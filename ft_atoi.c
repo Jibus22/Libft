@@ -6,13 +6,13 @@
 /*   By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 16:14:19 by jle-corr          #+#    #+#             */
-/*   Updated: 2019/12/20 22:55:54 by jle-corr         ###   ########.fr       */
+/*   Updated: 2021/03/20 16:52:25 by jle-corr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	unsigned int	nbr;
 	int				i;
@@ -28,5 +28,8 @@ int			ft_atoi(const char *str)
 	nbr = 0;
 	while (ft_isdigit(str[i]))
 		nbr = nbr * 10 + str[i++] - 48;
-	return ((int)(neg ? -nbr : nbr));
+	if (neg)
+		return ((int)(-nbr));
+	else
+		return ((int) nbr);
 }

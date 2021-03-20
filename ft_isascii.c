@@ -6,13 +6,13 @@
 /*   By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 16:11:26 by jle-corr          #+#    #+#             */
-/*   Updated: 2019/12/03 16:11:29 by jle-corr         ###   ########.fr       */
+/*   Updated: 2021/03/20 00:56:16 by jle-corr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

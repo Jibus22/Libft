@@ -6,13 +6,13 @@
 /*   By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 15:12:34 by jle-corr          #+#    #+#             */
-/*   Updated: 2020/04/08 15:12:36 by jle-corr         ###   ########.fr       */
+/*   Updated: 2021/03/20 01:06:22 by jle-corr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_strdel(char **s)
+void	ft_strdel(char **s)
 {
 	if (*s)
 	{

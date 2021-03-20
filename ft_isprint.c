@@ -6,13 +6,13 @@
 /*   By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 16:11:41 by jle-corr          #+#    #+#             */
-/*   Updated: 2019/12/03 16:11:44 by jle-corr         ###   ########.fr       */
+/*   Updated: 2021/03/20 00:56:40 by jle-corr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	return (c >= ' ' && c <= '~');
 }

@@ -6,20 +6,21 @@
 /*   By: jle-corr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 16:16:44 by jle-corr          #+#    #+#             */
-/*   Updated: 2019/12/09 00:36:41 by jle-corr         ###   ########.fr       */
+/*   Updated: 2021/03/20 01:10:37 by jle-corr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;
 	char	*strmap;
 
 	if (!s || !f)
 		return (NULL);
-	if (!(strmap = (char*)malloc(sizeof(*strmap) * (ft_strlen(s) + 1))))
+	strmap = (char *)malloc(sizeof(*strmap) * (ft_strlen(s) + 1));
+	if (!(strmap))
 		return (NULL);
 	i = -1;
 	while (s[++i] != '\0')
