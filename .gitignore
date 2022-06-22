@@ -1,5 +1,6 @@
 main_linked_list.c
 mainlibft.c
 test.sh
-libftobj/
+*.o
 libft.a
+*.out
