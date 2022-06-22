@@ -1,4 +1,4 @@
-#include "rbt.h"
+#include "ft_rbt.h"
 
 void destroy_rbt(t_rbt *node) {
   if (node) {

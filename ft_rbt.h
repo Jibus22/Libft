@@ -1,5 +1,5 @@
-#ifndef RBT_H
-#define RBT_H
+#ifndef FT_RBT_H
+#define FT_RBT_H
 
 #include <stdbool.h>
 #include <stdio.h>
